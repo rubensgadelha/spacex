@@ -46,3 +46,9 @@ group :development do
   # gem "spring"
 end
 
+group :test, :development do
+  gem 'rspec-rails', '~> 6.0.0'
+end
+
+
+gem "rest-client", "~> 2.1"

@@ -6,8 +6,10 @@ import Tab from '@mui/material/Tab';
 
 const Root = () => {
   
-  const currentActiveTab = ["/launches/next", "/launches/upcoming", "/launches/latest", "/launches/past"]
+  let currentActiveTab = ["/launches/next", "/launches/upcoming", "/launches/latest", "/launches/past"]
     .findIndex((str) => str === window.location.pathname)
+
+  if (currentActiveTab < 0) currentActiveTab = 0;
 
   const [activeTab, setActiveTab] = useState(currentActiveTab);
 
